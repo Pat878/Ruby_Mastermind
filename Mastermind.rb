@@ -37,8 +37,16 @@ def playerGuess
 end
 
 def compareCodes
-  print @colorCode
-  print @guessCode
+  @results = []
+  if @guessCode[0] == @colorCode[0]
+    puts "Nice!"
+  else
+    "Sorry sucker!"
+  end
+
+if @guessCode == @colorCode
+  puts "You win!"
+  exit
 end
 
 end
