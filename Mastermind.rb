@@ -4,7 +4,7 @@ def computerCode
   # red = 1, green = 2, blue = 3, black = 4, white = 5, brown = 6
 @code = Array.new(4) {rand(1..6)}
 
-print @code.map { |x|
+@colorCode = @code.map { |x|
   if x == 1
   "red"
 elsif x == 2
@@ -20,7 +20,6 @@ elsif x == 6
 #else x
   end
 }
-#print @guessCode
 
 end
 
@@ -34,8 +33,12 @@ def playerGuess
   puts "Please give me the fourth color."
   color4 = gets.chomp
   @guessCode = [color1, color2, color3, color4]
-  print @guessCode
 
+end
+
+def compareCodes
+  print @colorCode
+  print @guessCode
 end
 
 end
@@ -43,3 +46,4 @@ end
 a = Mastermind.new
 a.playerGuess
 a.computerCode
+a.compareCodes
