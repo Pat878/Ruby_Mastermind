@@ -21,9 +21,23 @@ print @code.map { |x|
   end
 }
 
+end
+
+def playerGuess
+  puts "Please give me the first color."
+  color1 = gets.chomp
+  puts "Please give me the second color."
+  color2 = gets.chomp
+  puts "Please give me the third color."
+  color3 = gets.chomp
+  puts "Please give me the fourth color."
+  color4 = gets.chomp
+  @guessCode = [color1, color2, color3, color4]
+  print @guessCode
 
 end
+
 end
 
 a = Mastermind.new
-a.computerCode
+a.playerGuess
