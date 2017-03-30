@@ -7,19 +7,20 @@ def computerCode
 print @code.map { |x|
   if x == 1
   "red"
-  elsif x == 2
+elsif x == 2
   "green"
-  elsif x == 3
+elsif x == 3
   "blue"
-  elsif x == 4
+elsif x == 4
   "black"
-  elsif x == 5
+elsif x == 5
   "white"
-  elsif x == 6
+elsif x == 6
   "brown"
 #else x
   end
 }
+#print @guessCode
 
 end
 
@@ -41,3 +42,4 @@ end
 
 a = Mastermind.new
 a.playerGuess
+a.computerCode
