@@ -37,16 +37,21 @@ def playerGuess
 end
 
 def compareCodes
-  @results = []
-  if @guessCode[0] == @colorCode[0]
-    puts "Nice!"
-  else
-    "Sorry sucker!"
-  end
+
+@results = @colorCode.zip(@guessCode).map { |x, y| if x == y
+"correct"
+end
+
+}
+
+print @colorCode
+print @results
 
 if @guessCode == @colorCode
   puts "You win!"
   exit
+end
+
 end
 
 end
