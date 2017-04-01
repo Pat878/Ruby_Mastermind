@@ -50,6 +50,18 @@ end
 print @colorCode
 print @results
 
+@colorCode.each { |x|
+  if (@guessCode.include?(x))
+    print "#{x} "
+  end
+}
+
+# print @colorCode.zip(@guessCode).collect { |x, y|
+#  if @colorCode.include?(y)
+#    "This color"
+#  end
+# }
+
 if @guessCode == @colorCode
   puts "You win!"
   exit
