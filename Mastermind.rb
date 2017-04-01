@@ -38,8 +38,11 @@ end
 
 def compareCodes
 
-@results = @colorCode.zip(@guessCode).map { |x, y| if x == y
-"correct"
+@results = @colorCode.zip(@guessCode).map { |x, y|
+  if x == y
+"Direct match!"
+else
+  "-"
 end
 
 }
