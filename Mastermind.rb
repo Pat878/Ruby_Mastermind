@@ -85,17 +85,3 @@ a = Mastermind.new
 a.computerCode
 a.playerGuess
 a.compareCodes
-
-
-
-#@colorCode.each { |x|
-#  if (@guessCode.include?(x))
-#    puts x
-#  end
-#}
-
-# print @colorCode.zip(@guessCode).collect { |x, y|
-#  if @colorCode.include?(y)
-#    "This color"
-#  end
-# }
