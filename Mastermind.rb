@@ -47,20 +47,11 @@ end
 
 }
 
-print @colorCode
-print @results
+print "\nHere's your guess: #{@guessCode}\n"
 
-@colorCode.each { |x|
-  if (@guessCode.include?(x))
-    print "#{x} "
-  end
-}
+print "Here are how many matches you guessed correctly: #{@results}\n"
 
-# print @colorCode.zip(@guessCode).collect { |x, y|
-#  if @colorCode.include?(y)
-#    "This color"
-#  end
-# }
+print "These colors are definitely somewhere in my code: #{@colorCode & @guessCode}\n"
 
 if @guessCode == @colorCode
   puts "You win!"
@@ -75,3 +66,17 @@ a = Mastermind.new
 a.playerGuess
 a.computerCode
 a.compareCodes
+
+
+
+#@colorCode.each { |x|
+#  if (@guessCode.include?(x))
+#    puts x
+#  end
+#}
+
+# print @colorCode.zip(@guessCode).collect { |x, y|
+#  if @colorCode.include?(y)
+#    "This color"
+#  end
+# }
