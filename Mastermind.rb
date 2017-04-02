@@ -21,7 +21,7 @@ elsif x == 6
   end
 }
 
-print "Welcome to Mastermind. You have 12 chances to guess my color code.\n
+print "Welcome to Mastermind! You have 12 chances to guess my color code.\n
 There are 6 colors you can guess from: red, green, blue, black, white, and brown. Let's begin!\n"
 
 end
