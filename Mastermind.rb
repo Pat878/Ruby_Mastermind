@@ -50,7 +50,8 @@ end
 
 }
 
-print "\nHere's your guess: #{@guessCode}\nHere are how many matches you guessed correctly: #{@results}\nThese colors are definitely somewhere in my code: #{@colorCode & @guessCode}\n"
+@hint = (@colorCode & @guessCode).shuffle
+print "\nHere's your guess: #{@guessCode}\nHere are how many matches you guessed correctly: #{@results}\nThese colors are definitely somewhere in my code: #{@hint}\n"
 turn
 
 if @guessCode == @colorCode
