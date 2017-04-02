@@ -71,10 +71,17 @@ end
 def turn
   @i ||= -1
   @i += 1
+
   if @win != true
   print "You have #{11-@i} guesses left!\n"
-end
   end
+
+  if @i == 11
+  print "Game over!\nHere's my code: #{@colorCode}"
+  exit
+  end
+
+end
 
 end
 
