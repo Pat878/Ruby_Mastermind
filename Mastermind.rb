@@ -50,12 +50,7 @@ end
 
 }
 
-print "\nHere's your guess: #{@guessCode}\n"
-
-print "Here are how many matches you guessed correctly: #{@results}\n"
-
-print "These colors are definitely somewhere in my code: #{@colorCode & @guessCode}\n"
-
+print "\nHere's your guess: #{@guessCode}\nHere are how many matches you guessed correctly: #{@results}\nThese colors are definitely somewhere in my code: #{@colorCode & @guessCode}\n"
 turn
 
 if @guessCode == @colorCode
