@@ -60,6 +60,11 @@ end
 
 end
 
+def turn
+  @i ||= -1
+  @i += 1
+end
+
 end
 
 a = Mastermind.new
