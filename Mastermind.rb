@@ -72,7 +72,7 @@ def turn
   @i ||= -1
   @i += 1
   if @win != true
-  print "You have #{11-@i} guesses left!"
+  print "You have #{11-@i} guesses left!\n"
 end
   end
 
