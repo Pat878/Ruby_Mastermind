@@ -24,7 +24,7 @@ elsif x == 6
 end
 
 def playerGuess
-  puts "Please give me the first color."
+  puts "\nPlease give me the first color."
   color1 = gets.chomp
   puts "Please give me the second color."
   color2 = gets.chomp
@@ -33,8 +33,8 @@ def playerGuess
   puts "Please give me the fourth color."
   color4 = gets.chomp
   @guessCode = [color1, color2, color3, color4]
-
-end
+  compareCodes
+  end
 
 def compareCodes
 
@@ -53,23 +53,33 @@ print "Here are how many matches you guessed correctly: #{@results}\n"
 
 print "These colors are definitely somewhere in my code: #{@colorCode & @guessCode}\n"
 
+turn
+
 if @guessCode == @colorCode
   puts "You win!"
+  @win = true
   exit
-end
+else
+  playerGuess
+  end
 
 end
 
 def turn
   @i ||= -1
   @i += 1
+  if @win != true
+  print "You have #{11-@i} guesses left!"
 end
+  end
+
+
 
 end
 
 a = Mastermind.new
-a.playerGuess
 a.computerCode
+a.playerGuess
 a.compareCodes
 
 
