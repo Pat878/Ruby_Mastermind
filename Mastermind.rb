@@ -1,5 +1,16 @@
 class Mastermind
 
+def typeOfGame
+
+  puts "If you want to guess the code, enter yes. Enter no, and I'll guess the code."
+  @answer = gets.chomp
+
+  if @answer == "yes"
+  computerCode
+  end
+
+end
+
 def computerCode
   # red = 1, green = 2, blue = 3, black = 4, white = 5, brown = 6
 @code = Array.new(4) {rand(1..6)}
@@ -23,7 +34,7 @@ elsif x == 6
 
 print "Welcome to Mastermind! You have 12 chances to guess my color code.\n
 There are 6 colors you can guess from: red, green, blue, black, white, and brown. Let's begin!\n"
-
+playerGuess
 end
 
 def playerGuess
@@ -82,6 +93,4 @@ end
 end
 
 a = Mastermind.new
-a.computerCode
-a.playerGuess
-a.compareCodes
+a.typeOfGame
