@@ -31,7 +31,7 @@ def userCode
   usercolor3 = gets.chomp
   puts "Please give me the fourth color."
   usercolor4 = gets.chomp
-  @yourCode = [color1, color2, color3, color4]
+  @yourCode = [usercolor1, usercolor2, usercolor3, usercolor4]
   computerGuess
 end
 
