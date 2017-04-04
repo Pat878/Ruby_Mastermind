@@ -21,6 +21,20 @@ def typeOfGame
 
 end
 
+def userCode
+
+  puts "\nPlease give me the first color."
+  usercolor1 = gets.chomp
+  puts "Please give me the second color."
+  usercolor2 = gets.chomp
+  puts "Please give me the third color."
+  usercolor3 = gets.chomp
+  puts "Please give me the fourth color."
+  usercolor4 = gets.chomp
+  @yourCode = [color1, color2, color3, color4]
+
+end
+
 def computerCode
   # red = 1, green = 2, blue = 3, black = 4, white = 5, brown = 6
 @code = Array.new(4) {rand(1..6)}
