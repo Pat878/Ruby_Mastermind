@@ -1,24 +1,34 @@
 class Mastermind
 
+
+
 def typeOfGame
 
   puts "If you want to guess the code, enter yes. Enter no, and I'll guess your code."
   @answer = gets.downcase.chomp
 
   if @answer == "yes"
-   computerCode
+  startGame
+
   elsif @answer == "no"
     userCode
   else puts "Please enter yes or no"
     @answer = gets.downcase.chomp
       if @answer == "yes"
-      computerCode
+      startGame
       elsif @answer == "no"
       userCode
       else exit
       end
   end
 
+end
+
+def startGame
+  computerCode
+  print "\nWelcome to Mastermind! You have 12 chances to guess my color code.
+  \nThere are 6 colors you can guess from: red, green, blue, black, white, and brown. Let's begin!\n"
+  playerGuess
 end
 
 def userCode
@@ -60,9 +70,6 @@ elsif x == 6
   end
 }
 
-print "\nWelcome to Mastermind! You have 12 chances to guess my color code.\n
-There are 6 colors you can guess from: red, green, blue, black, white, and brown. Let's begin!\n"
-playerGuess
 end
 
 def playerGuess
