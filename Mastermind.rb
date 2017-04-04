@@ -10,13 +10,13 @@ def typeOfGame
   elsif @answer == "no"
     userCode
   else puts "Please enter yes or no"
-     @answer = gets.downcase.chomp
-    if @answer == "yes"
-     computerCode
-    elsif @answer == "no"
+    @answer = gets.downcase.chomp
+      if @answer == "yes"
+      computerCode
+      elsif @answer == "no"
       userCode
-    else exit
-    end
+      else exit
+      end
   end
 
 end
@@ -32,8 +32,12 @@ def userCode
   puts "Please give me the fourth color."
   usercolor4 = gets.chomp
   @yourCode = [color1, color2, color3, color4]
-
+  computerGuess
 end
+
+def computerGuess
+end
+
 
 def computerCode
   # red = 1, green = 2, blue = 3, black = 4, white = 5, brown = 6
