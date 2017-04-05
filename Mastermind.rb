@@ -1,7 +1,5 @@
 class Mastermind
 
-
-
 def typeOfGame
 
   puts "If you want to guess the code, enter yes. Enter no, and I'll guess your code."
@@ -46,8 +44,18 @@ def userCode
 end
 
 def computerGuess
-end
+  computerCode
+  @results = @colorCode.zip(@yourCode).map { |x, y|
+    if x == y
+  "Direct match!"
+  else
+    "-"
+  end
 
+  }
+
+  print @results
+end
 
 def computerCode
   # red = 1, green = 2, blue = 3, black = 4, white = 5, brown = 6
