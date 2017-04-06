@@ -51,10 +51,11 @@ def computerGuess
   else
     "-"
   end
-
   }
 
   print @results
+  print @colorCode
+   @newArray = @colorCode.zip(@yourCode).map{|x,y| x == y ? y : x}
 end
 
 def computerCode
