@@ -2,20 +2,22 @@ class Mastermind
 
 def typeOfGame
 
-  puts "If you want to guess the code, enter yes. Enter no, and I'll guess your code."
+  puts "If you want to guess the code, enter yes. Enter no, and I'll end the game."
   @answer = gets.downcase.chomp
 
   if @answer == "yes"
   startGame
 
   elsif @answer == "no"
-    userCode
+    puts "Goodbye!"
+    exit
+    #userCode
   else puts "Please enter yes or no"
     @answer = gets.downcase.chomp
       if @answer == "yes"
       startGame
       elsif @answer == "no"
-      userCode
+      #userCode
       else exit
       end
   end
