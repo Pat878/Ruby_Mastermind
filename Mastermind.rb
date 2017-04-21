@@ -122,6 +122,8 @@ else
 end
 
 def turn
+  #I found an answer on stackoverflow that helped me with this method, but I forget the link.
+
   @i ||= -1
   @i += 1
 
